@@ -3,8 +3,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   background-color: rgba(42, 45, 52, 0.8); /* #2a2d34 with 80% opacity */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .construction-message {
@@ -14,6 +17,10 @@
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .construction-message h2 {
@@ -29,9 +36,34 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: 768px) {
+  .home-container {
+    min-height: calc(100vh - 90px); /* Adjust for taller header on mobile */
+    padding: 0.5rem;
+  }
+
+  .construction-message {
+    padding: 1.5rem;
+  }
+
+  .construction-message h2 {
+    font-size: 2rem;
+  }
+
+  .construction-message h3 {
+    font-size: 1.5rem;
+  }
+
+  .construction-message p {
+    font-size: 1rem;
+  }
+}
+
 .construction-message p {
   font-size: 1.1rem;
   line-height: 1.8;
+  margin: 0;
+  padding: 0 1rem;
 }
 
 .construction-message a {
