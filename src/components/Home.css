@@ -10,11 +10,21 @@
   margin: 0;
 }
 
+.company-logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .construction-message {
   text-align: center;
-  color: #ffffff;
-  background-color: rgba(42, 45, 52, 0.9);
-  padding: 2rem;
+  color: #2a2d34;
+  background-color: #ffffff;
+  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -34,6 +44,7 @@
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
+  color: #2a2d34;
 }
 
 @media screen and (max-width: 768px) {
@@ -57,6 +68,11 @@
   .construction-message p {
     font-size: 1rem;
   }
+
+  .company-logo {
+    max-width: 200px;
+    margin-bottom: 0.75rem;
+  }
 }
 
 .construction-message p {
@@ -64,6 +80,7 @@
   line-height: 1.8;
   margin: 0;
   padding: 0 1rem;
+  color: #2a2d34;
 }
 
 .construction-message a {

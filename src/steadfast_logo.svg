@@ -1,0 +1,28 @@
+
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .blue {{ fill: #0A3161; font-family: Arial, sans-serif; font-weight: bold; }}
+    .red {{ fill: #b31942; font-family: Arial, sans-serif; font-weight: bold; }}
+    .white {{ fill: #FFFFFF; font-family: Arial, sans-serif; font-weight: bold; }}
+  </style>
+
+  <!-- Roof -->
+  <polygon points="150,100 250,30 350,100" fill="#b31942"/>
+  <polygon points="250,30 350,100 365,100 250,15 135,100 150,100" fill="#b31942"/>
+
+  <!-- House -->
+  <rect x="180" y="100" width="140" height="100" fill="#0A3161"/>
+  <!-- Windows -->
+  <rect x="210" y="120" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="240" y="120" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="210" y="150" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="240" y="150" width="20" height="20" fill="#FFFFFF"/>
+
+  <!-- Hammer -->
+  <path d="M270,80 L320,30 L330,40 L280,90 Z" fill="#0A3161"/>
+
+  <!-- Text -->
+  <text x="250" y="250" font-size="32" text-anchor="middle" class="blue">STEADFAST</text>
+  <text x="250" y="290" font-size="32" text-anchor="middle" class="red">EXTERIORS</text>
+  <text x="250" y="330" font-size="18" text-anchor="middle" class="white">& GENERAL CONTRACTING TN</text>
+</svg>

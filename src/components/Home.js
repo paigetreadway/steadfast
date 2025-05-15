@@ -1,10 +1,16 @@
 import React from "react";
 import "./Home.css";
+import logo from "../assets/logos/steadfast-logo.png";
 
 const Home = () => {
   return (
     <div className="home-container">
       <div className="construction-message">
+        <img
+          src={logo}
+          alt="Steadfast Exteriors Logo"
+          className="company-logo"
+        />
         <h2>COMING SOON!!</h2>
         <h3>Website Under Construction</h3>
         <p>

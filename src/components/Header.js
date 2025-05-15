@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activePath, setActivePath] = useState(window.location.pathname);
-
-  useEffect(() => {
-    // Update active path when URL changes
-    setActivePath(window.location.pathname);
-  }, []);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -19,11 +15,6 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
     document.body.style.overflow = "visible";
-  };
-
-  const handleNavClick = (path) => {
-    setActivePath(path);
-    closeMenu();
   };
 
   return (
@@ -52,58 +43,58 @@ const Header = () => {
         <nav className="drawer-nav">
           <ul>
             <li>
-              <a
-                href="/"
-                className={activePath === "/" ? "active" : ""}
-                onClick={() => handleNavClick("/")}
+              <Link
+                to="/"
+                className={location.pathname === "/" ? "active" : ""}
+                onClick={closeMenu}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/about"
-                className={activePath === "/about" ? "active" : ""}
-                onClick={() => handleNavClick("/about")}
+              <Link
+                to="/about"
+                className={location.pathname === "/about" ? "active" : ""}
+                onClick={closeMenu}
               >
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/services"
-                className={activePath === "/services" ? "active" : ""}
-                onClick={() => handleNavClick("/services")}
+              <Link
+                to="/services"
+                className={location.pathname === "/services" ? "active" : ""}
+                onClick={closeMenu}
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/projects"
-                className={activePath === "/projects" ? "active" : ""}
-                onClick={() => handleNavClick("/projects")}
+              <Link
+                to="/projects"
+                className={location.pathname === "/projects" ? "active" : ""}
+                onClick={closeMenu}
               >
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/reviews"
-                className={activePath === "/reviews" ? "active" : ""}
-                onClick={() => handleNavClick("/reviews")}
+              <Link
+                to="/reviews"
+                className={location.pathname === "/reviews" ? "active" : ""}
+                onClick={closeMenu}
               >
                 Reviews
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/contact"
-                className={activePath === "/contact" ? "active" : ""}
-                onClick={() => handleNavClick("/contact")}
+              <Link
+                to="/contact"
+                className={location.pathname === "/contact" ? "active" : ""}
+                onClick={closeMenu}
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
