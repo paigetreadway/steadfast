@@ -34,7 +34,7 @@ const Header = () => {
       {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
 
       {/* Drawer Menu */}
-      <div className={`drawer-menu ${isMenuOpen ? "open" : ""}`}>
+      <div className={`drawer ${isMenuOpen ? "open" : ""}`}>
         <div className="drawer-header">
           <button className="close-button" onClick={closeMenu}>
             <span>&times;</span>
@@ -53,29 +53,11 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="/about"
-                className={location.pathname === "/about" ? "active" : ""}
+                to="/warranty"
+                className={location.pathname === "/warranty" ? "active" : ""}
                 onClick={closeMenu}
               >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/services"
-                className={location.pathname === "/services" ? "active" : ""}
-                onClick={closeMenu}
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/projects"
-                className={location.pathname === "/projects" ? "active" : ""}
-                onClick={closeMenu}
-              >
-                Projects
+                Warranty
               </Link>
             </li>
             <li>
@@ -94,6 +76,16 @@ const Header = () => {
                 onClick={closeMenu}
               >
                 Contact
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/support"
+                className={location.pathname === "/support" ? "active" : ""}
+                onClick={closeMenu}
+              >
+                Support
               </Link>
             </li>
           </ul>

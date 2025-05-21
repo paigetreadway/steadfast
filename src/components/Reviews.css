@@ -1,0 +1,183 @@
+.reviews-container {
+  min-height: calc(100vh - 60px);
+  padding: 2rem;
+  background-color: rgba(42, 45, 52, 0.8);
+  width: 100%;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.reviews-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews-section {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-header {
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.google-reviews {
+  text-align: center;
+}
+
+.google-reviews h2 {
+  color: #b31942;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.review-description {
+  color: #2a2d34;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.review-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.reviewer-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.reviewer-info h3 {
+  color: #2a2d34;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star {
+  color: #ddd;
+  font-size: 1.2rem;
+}
+
+.star.filled {
+  color: #ffd700;
+}
+
+.review-text {
+  color: #2a2d34;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.review-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.loading {
+  color: #2a2d34;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.review-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.review-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #b31942;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid #b31942;
+}
+
+.review-button:hover {
+  background-color: #ffffff;
+  color: #b31942;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews-container {
+    padding: 1rem;
+  }
+
+  .reviews-section {
+    padding: 2rem;
+  }
+
+  .page-header {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .google-reviews h2 {
+    font-size: 1.75rem;
+  }
+
+  .review-description {
+    font-size: 1.1rem;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .review-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}

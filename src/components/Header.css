@@ -115,7 +115,7 @@
 }
 
 /* Drawer Menu */
-.drawer-menu {
+.drawer {
   position: fixed;
   top: 0;
   right: 0;
@@ -129,7 +129,7 @@
   overflow-y: auto;
 }
 
-.drawer-menu.open {
+.drawer.open {
   transform: translateX(0);
 }
 
@@ -195,7 +195,7 @@
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .drawer-menu {
+  .drawer {
     background-color: #1a1c21;
   }
 
@@ -208,11 +208,11 @@
 
 /* Mobile styles for drawer */
 @media screen and (max-width: 768px) {
-  .drawer-menu {
+  .drawer {
     transform: translateX(100%);
   }
 
-  .drawer-menu.open {
+  .drawer.open {
     transform: translateX(0);
   }
 
