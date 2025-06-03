@@ -1,27 +1,29 @@
 import React from "react";
 import "./Home.css";
 import logo from "../assets/logos/steadfast-logo.png";
+import roof from "../assets/logos/roof.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="construction-message">
-        <img
-          src={logo}
-          alt="Steadfast Exteriors Logo"
-          className="company-logo"
-        />
-        <h2>COMING SOON!!</h2>
-        <h3>Website Under Construction</h3>
-        <p>
-          For more information contact:
-          <br />
-          Ed at <a href="tel:615-542-2081">615-542-2081</a>
-          <br />
-          or
-          <br />
-          Allen at <a href="tel:615-542-0208">615-542-0208</a>
-        </p>
+      <div className="roof-image-wrapper">
+        <img src={roof} alt="Roof" className="roof-image" />
+        <div className="roof-overlay"></div>
+        <div className="roof-mission-content">
+          <div className="roof-mission-text">
+            Our mission is to provide exceptional customer service through open
+            communication and solid construction experience.
+          </div>
+          <div className="button-container">
+            <Link to="/warranty" className="roof-contact-btn">
+              Submit Warranty Request
+            </Link>
+            <Link to="/support" className="support-btn">
+              Get Support
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

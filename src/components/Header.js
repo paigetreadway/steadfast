@@ -69,15 +69,6 @@ const Header = () => {
                 Reviews
               </Link>
             </li>
-            <li>
-              <Link
-                to="/contact"
-                className={location.pathname === "/contact" ? "active" : ""}
-                onClick={closeMenu}
-              >
-                Contact
-              </Link>
-            </li>
 
             <li>
               <Link
