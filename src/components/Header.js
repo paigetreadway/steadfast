@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
+import { FaInstagram, FaGoogle } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +20,66 @@ const Header = () => {
 
   return (
     <header className="header">
+      <div className="top-bar">
+        <div className="social-links">
+          <a
+            href="https://instagram.com/steadfastexteriors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram className="social-icon" />
+          </a>
+          <a
+            href="https://g.page/steadfastexteriors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGoogle className="social-icon google-icon" />
+          </a>
+        </div>
+      </div>
       <div className="header-content">
         <h1>Steadfast Exteriors</h1>
+
+        {/* Desktop Navigation */}
+        <nav className="desktop-nav">
+          <ul>
+            <li>
+              <Link
+                to="/"
+                className={location.pathname === "/" ? "active" : ""}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/warranty"
+                className={location.pathname === "/warranty" ? "active" : ""}
+              >
+                Warranty
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/reviews"
+                className={location.pathname === "/reviews" ? "active" : ""}
+              >
+                Reviews
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/support"
+                className={location.pathname === "/support" ? "active" : ""}
+              >
+                Support
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Mobile Menu Button */}
         <button className="menu-button" onClick={toggleMenu}>
           <div className={`hamburger ${isMenuOpen ? "open" : ""}`}>
             <span></span>
@@ -33,7 +92,7 @@ const Header = () => {
       {/* Overlay */}
       {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
 
-      {/* Drawer Menu */}
+      {/* Mobile Drawer Menu */}
       <div className={`drawer ${isMenuOpen ? "open" : ""}`}>
         <div className="drawer-header">
           <button className="close-button" onClick={closeMenu}>
@@ -69,7 +128,6 @@ const Header = () => {
                 Reviews
               </Link>
             </li>
-
             <li>
               <Link
                 to="/support"

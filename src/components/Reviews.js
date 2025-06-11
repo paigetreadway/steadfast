@@ -31,7 +31,6 @@ const Reviews = () => {
 
   return (
     <div className="reviews-container">
-      <h1 className="page-header">Reviews</h1>
       <div className="reviews-content">
         <div className="reviews-section">
           <div className="google-reviews">

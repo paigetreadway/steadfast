@@ -1,8 +1,9 @@
 import React from "react";
 import "./Home.css";
 import logo from "../assets/logos/steadfast-logo.png";
-import roof from "../assets/logos/roof.png";
+import roof from "../assets/logos/steadfast-house.png";
 import { Link } from "react-router-dom";
+import { FaAward, FaHandshake, FaLink } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -16,13 +17,36 @@ const Home = () => {
             communication and solid construction experience.
           </div>
           <div className="button-container">
-            <Link to="/warranty" className="roof-contact-btn">
-              Submit Warranty Request
-            </Link>
             <Link to="/support" className="support-btn">
               Get Support
             </Link>
+            <Link to="/warranty" className="roof-contact-btn">
+              Submit Warranty Request
+            </Link>
           </div>
+        </div>
+      </div>
+      <div className="features-section">
+        <div className="feature">
+          <span className="feature-icon">
+            <FaAward />
+          </span>
+          <h3>Competency</h3>
+          <p>We bring years of experience and expertise to every project.</p>
+        </div>
+        <div className="feature">
+          <span className="feature-icon">
+            <FaHandshake />
+          </span>
+          <h3>Character</h3>
+          <p>Integrity and honesty are at the core of everything we do.</p>
+        </div>
+        <div className="feature">
+          <span className="feature-icon">
+            <FaLink />
+          </span>
+          <h3>Connections</h3>
+          <p>We build lasting relationships with our clients and partners.</p>
         </div>
       </div>
     </div>
