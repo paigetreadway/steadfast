@@ -1,7 +1,6 @@
 .reviews-container {
-  min-height: calc(100vh - 60px);
+  /* min-height: calc(100vh - 60px); */
   padding: 2rem;
-  background-color: rgba(42, 45, 52, 0.8);
   width: 100%;
   box-sizing: border-box;
   color: #ffffff;
@@ -33,7 +32,7 @@
 }
 
 .google-reviews h2 {
-  color: #b31942;
+  color: #222c44;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
@@ -179,5 +178,50 @@
     width: 100%;
     max-width: 300px;
     text-align: center;
+  }
+}
+
+.google-map-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.google-map-container iframe {
+  width: 100%;
+  max-width: 400px;
+  min-height: 200px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.reviews-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.reviews-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.google-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .reviews-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .google-map-container {
+    margin: 0;
   }
 }

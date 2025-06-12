@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
-import { FaInstagram, FaGoogle } from "react-icons/fa";
+import { FaFacebook, FaGoogle } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,14 +23,14 @@ const Header = () => {
       <div className="top-bar">
         <div className="social-links">
           <a
-            href="https://instagram.com/steadfastexteriors"
+            href="https://www.facebook.com/steadfastexteriorstn/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="social-icon" />
+            <FaFacebook className="social-icon" />
           </a>
           <a
-            href="https://g.page/steadfastexteriors"
+            href="https://g.page/steadfastexteriorstn"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -87,13 +87,46 @@ const Header = () => {
             <span></span>
           </div>
         </button>
+
+        {isMenuOpen && (
+          <div className="mobile-dropdown-menu">
+            <Link
+              to="/"
+              onClick={closeMenu}
+              className={location.pathname === "/" ? "active" : ""}
+            >
+              Home
+            </Link>
+            <Link
+              to="/warranty"
+              onClick={closeMenu}
+              className={location.pathname === "/warranty" ? "active" : ""}
+            >
+              Warranty
+            </Link>
+            <Link
+              to="/reviews"
+              onClick={closeMenu}
+              className={location.pathname === "/reviews" ? "active" : ""}
+            >
+              Reviews
+            </Link>
+            <Link
+              to="/support"
+              onClick={closeMenu}
+              className={location.pathname === "/support" ? "active" : ""}
+            >
+              Support
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Overlay */}
       {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
 
       {/* Mobile Drawer Menu */}
-      <div className={`drawer ${isMenuOpen ? "open" : ""}`}>
+      {/* <div className={`drawer ${isMenuOpen ? "open" : ""}`}>
         <div className="drawer-header">
           <button className="close-button" onClick={closeMenu}>
             <span>&times;</span>
@@ -139,7 +172,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
     </header>
   );
 };

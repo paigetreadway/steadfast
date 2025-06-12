@@ -56,7 +56,8 @@
 
 @media screen and (max-width: 768px) {
   .home-container {
-    min-height: calc(100vh - 90px); /* Adjust for taller header on mobile */
+    padding-top: 30px; /* 30px top bar + 60px navbar */
+    min-height: unset; /* Remove or adjust min-height if needed */
   }
 
   .construction-message {
@@ -78,6 +79,10 @@
   .company-logo {
     max-width: 200px;
     margin-bottom: 0.75rem;
+  }
+
+  .roof-mission-text {
+    display: none;
   }
 }
 
@@ -259,4 +264,57 @@
   color: #444;
   font-size: 1rem;
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .features-section {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    max-width: 95vw;
+    align-items: stretch;
+  }
+
+  .feature {
+    padding: 1rem 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    background: #fff;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-dropdown-menu {
+    position: absolute;
+    top: 100%; /* directly below header-content */
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    z-index: 1002;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    align-items: stretch;
+  }
+  .mobile-dropdown-menu a {
+    color: #222c44;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+    text-align: left;
+  }
+  .mobile-dropdown-menu a:last-child {
+    border-bottom: none;
+  }
+  .mobile-dropdown-menu a.active,
+  .mobile-dropdown-menu a:hover {
+    background: #f5f5f5;
+    color: #b31942;
+  }
 }
