@@ -181,7 +181,7 @@ body {
   justify-content: center;
 }
 
-.roof-contact-btn {
+.roof-warranty-btn {
   background: transparent;
   color: #dedede;
   font-weight: bold;
@@ -218,7 +218,7 @@ body {
   color: #000000;
 }
 
-.roof-contact-btn:hover {
+.roof-warranty-btn:hover {
   background: #b31942;
   color: #fff;
 }

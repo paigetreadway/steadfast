@@ -110,7 +110,7 @@ const Warranty = () => {
 
               <button
                 type="submit"
-                className="submit-button"
+                className="warranty-submit-button"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Submitting..." : "Submit Request"}

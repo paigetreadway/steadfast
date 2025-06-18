@@ -43,13 +43,13 @@ const Support = () => {
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact-content">
-        <div className="contact-info">
-          <div className="contact-left">
-            <h2>Contact Us</h2>
-            <div className="contact-details">
-              <div className="contact-item">
+    <div className="support-container">
+      <div className="support-content">
+        <div className="support-info">
+          <div className="support-left">
+            <h2>Contact Us!</h2>
+            <div className="support-details">
+              <div className="support-item">
                 <h3>Phone</h3>
                 <p>
                   Ed: <a href="tel:615-542-2081">615-542-2081</a>
@@ -57,43 +57,45 @@ const Support = () => {
                   Allen: <a href="tel:615-542-0208">615-542-0208</a>
                 </p>
               </div>
-              <div className="contact-item">
+              <div className="support-item">
                 <h3>Business Hours</h3>
                 <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
                 <p>Saturday - Sunday: By Appointment</p>
               </div>
-              <div className="contact-item">
+              <div className="support-item">
                 <h3>Service Area</h3>
                 <p>Middle Tennessee</p>
               </div>
             </div>
           </div>
 
-          <div className="contact-right">
-            <div className="contact-form">
+          <div className="support-right">
+            <div className="support-form">
               <h3>Send us a Message</h3>
               <form ref={form} onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="support-form-group">
                   <label htmlFor="user_name">Name *</label>
                   <input type="text" id="user_name" name="user_name" required />
                 </div>
 
-                <div className="form-group">
-                  <label htmlFor="user_email">Email *</label>
-                  <input
-                    type="email"
-                    id="user_email"
-                    name="user_email"
-                    required
-                  />
+                <div className="support-row">
+                  <div className="support-form-group">
+                    <label htmlFor="user_email">Email *</label>
+                    <input
+                      type="email"
+                      id="user_email"
+                      name="user_email"
+                      required
+                    />
+                  </div>
+
+                  <div className="support-form-group">
+                    <label htmlFor="user_phone">Phone</label>
+                    <input type="tel" id="user_phone" name="user_phone" />
+                  </div>
                 </div>
 
-                <div className="form-group">
-                  <label htmlFor="user_phone">Phone</label>
-                  <input type="tel" id="user_phone" name="user_phone" />
-                </div>
-
-                <div className="form-group">
+                <div className="support-form-group">
                   <label htmlFor="message">Message *</label>
                   <textarea
                     id="message"
@@ -105,7 +107,7 @@ const Support = () => {
 
                 {submitStatus.message && (
                   <div
-                    className={`submit-status ${
+                    className={`support-submit-status ${
                       submitStatus.isError ? "error" : "success"
                     }`}
                   >
@@ -115,7 +117,7 @@ const Support = () => {
 
                 <button
                   type="submit"
-                  className="submit-button"
+                  className="support-submit-button"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}

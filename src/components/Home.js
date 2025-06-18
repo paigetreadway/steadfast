@@ -20,7 +20,7 @@ const Home = () => {
             <Link to="/support" className="support-btn">
               Get Support
             </Link>
-            <Link to="/warranty" className="roof-contact-btn">
+            <Link to="/warranty" className="roof-warranty-btn">
               Submit Warranty Request
             </Link>
           </div>

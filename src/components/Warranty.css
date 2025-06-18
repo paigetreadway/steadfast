@@ -51,7 +51,7 @@
   border-radius: 4px;
   font-size: 0.95rem;
   margin-bottom: 0.25rem;
-  background: #eaf1fb;
+  background: #f6f9fd;
 }
 
 .form-group textarea {
@@ -67,7 +67,7 @@
   border-color: #004aad;
 }
 
-.submit-button {
+.warranty-submit-button {
   background-color: #004aad;
   color: white;
   border: none;
@@ -83,7 +83,7 @@
   margin: 0 auto;
 }
 
-.submit-button:hover {
+.warranty-submit-button:hover {
   background-color: #ff1f57;
 }
 
