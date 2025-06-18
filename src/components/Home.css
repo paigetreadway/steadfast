@@ -66,7 +66,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .home-container {
-    padding-top: 30px; /* 30px top bar + 60px navbar */
+    padding-top: 120px; /* 30px top bar + 60px navbar */
     min-height: unset; /* Remove or adjust min-height if needed */
   }
 
