@@ -21,6 +21,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="top-bar">
+        <div className="contact-info-bar">
+          CONTACT US TODAY! Ed: 615-542-2081 or Allen: 615-542-0208
+        </div>
         <div className="social-links">
           <a
             href="https://www.facebook.com/steadfastexteriorstn/"
@@ -60,20 +63,21 @@ const Header = () => {
                 Warranty
               </Link>
             </li>
-            <li>
-              <Link
-                to="/reviews"
-                className={location.pathname === "/reviews" ? "active" : ""}
-              >
-                Reviews
-              </Link>
-            </li>
+
             <li>
               <Link
                 to="/support"
                 className={location.pathname === "/support" ? "active" : ""}
               >
                 Support
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/reviews"
+                className={location.pathname === "/reviews" ? "active" : ""}
+              >
+                Reviews
               </Link>
             </li>
           </ul>
@@ -105,18 +109,18 @@ const Header = () => {
               Warranty
             </Link>
             <Link
-              to="/reviews"
-              onClick={closeMenu}
-              className={location.pathname === "/reviews" ? "active" : ""}
-            >
-              Reviews
-            </Link>
-            <Link
               to="/support"
               onClick={closeMenu}
               className={location.pathname === "/support" ? "active" : ""}
             >
               Support
+            </Link>
+            <Link
+              to="/reviews"
+              onClick={closeMenu}
+              className={location.pathname === "/reviews" ? "active" : ""}
+            >
+              Reviews
             </Link>
           </div>
         )}

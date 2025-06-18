@@ -1,83 +1,32 @@
-.contact-container {
-  min-height: calc(100vh - 60px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
+.warranty-container {
   width: 100%;
   box-sizing: border-box;
-  background-color: rgba(42, 45, 52, 0.8);
+  color: #222c44;
+  margin: 0;
+  position: relative;
+  padding-top: 90px;
 }
 
-.contact-content {
+.warranty-content {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.contact-info {
-  text-align: left;
-  background-color: #ffffff;
-  padding: 1.5rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.warranty-info {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(120, 0, 36, 0.08);
+  max-width: 380px;
   width: 100%;
-  display: flex;
+  padding: 1.5rem 1rem;
+  display: block;
+  margin: 1.5rem auto;
   gap: 2rem;
 }
 
 .warranty-form {
   flex: 1;
-}
-
-.contact-info h2 {
-  color: #b31942;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  text-align: left;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-item h3 {
-  color: #b31942;
-  margin-bottom: 0.25rem;
-  font-size: 1.1rem;
-  text-align: left;
-}
-
-.contact-item p {
-  color: #2a2d34;
-  line-height: 1.4;
-  font-size: 0.95rem;
-  text-align: left;
-  margin: 0;
-}
-
-.contact-item a {
-  color: #b31942;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-  color: #ff1f57;
-}
-
-.contact-form {
-  padding-top: 1rem;
-}
-
-.contact-form h3 {
-  color: #2a2d34;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  text-align: left;
 }
 
 .form-group {
@@ -97,14 +46,16 @@
 .form-group textarea {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ddd;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 0.95rem;
-  transition: border-color 0.3s ease;
+  margin-bottom: 0.25rem;
+  background: #eaf1fb;
 }
 
 .form-group textarea {
-  height: 60px;
+  height: 30px;
   resize: vertical;
   min-height: 60px;
   max-height: 200px;
@@ -113,7 +64,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #b31942;
+  border-color: #004aad;
 }
 
 .submit-button {
@@ -160,58 +111,45 @@
   margin-top: 0.25rem;
 }
 
-.contact-row {
+.warranty-row {
   display: flex;
   gap: 1rem;
   margin-bottom: 0.75rem;
 }
 
-.contact-row .form-group {
+.warranty-row .form-group {
   flex: 1;
   margin-bottom: 0;
 }
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
-  .contact-container {
+  .warranty-container {
     padding: 1rem;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 90px);
   }
 
-  .contact-info {
+  .warranty-info {
     padding: 1.5rem;
     flex-direction: column;
     gap: 2rem;
   }
 
-  .contact-left {
-    padding-right: 0;
-    border-right: none;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1.5rem;
-  }
-
-  .contact-right {
-    padding-left: 0;
-    padding-top: 1.5rem;
-  }
-
-  .contact-info h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-
-  .contact-details {
-    gap: 1rem;
-  }
-
-  .contact-item h3,
-  .contact-item p,
-  .contact-form h3 {
+  .warranty-form h3 {
     text-align: center;
   }
 
   .submit-button {
     padding: 0.75rem;
+  }
+
+  .warranty-row {
+    flex-direction: column;
+    gap: 0;
   }
 }

@@ -1,14 +1,24 @@
-.home-container {
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+}
+
+#root {
   min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.home-container {
   width: 100%;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #222c44;
   margin: 0;
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  padding-top: 90px;
+  background: transparent;
 }
 
 .home-content {
@@ -201,6 +211,11 @@
   pointer-events: auto;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   margin-bottom: 0;
+}
+
+.support-btn:hover {
+  background: #dedede;
+  color: #000000;
 }
 
 .roof-contact-btn:hover {

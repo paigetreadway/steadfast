@@ -51,73 +51,71 @@ const Warranty = () => {
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact-content">
-        <div className="contact-info">
+    <div className="warranty-container">
+      <div className="warranty-content">
+        <div className="warranty-info">
           <div className="warranty-form">
-            <div className="contact-form">
-              <h3>Submit a Warranty Request</h3>
-              <form ref={form} onSubmit={handleSubmit}>
+            <h3 style={{ marginBottom: "1rem" }}>Submit a Warranty Request</h3>
+            <form ref={form} onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="user_name">Name *</label>
+                <input type="text" id="user_name" name="user_name" required />
+              </div>
+
+              <div className="warranty-row">
                 <div className="form-group">
-                  <label htmlFor="user_name">Name *</label>
-                  <input type="text" id="user_name" name="user_name" required />
-                </div>
-
-                <div className="contact-row">
-                  <div className="form-group">
-                    <label htmlFor="user_email">Email *</label>
-                    <input
-                      type="email"
-                      id="user_email"
-                      name="user_email"
-                      required
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="user_phone">Phone</label>
-                    <input type="tel" id="user_phone" name="user_phone" />
-                  </div>
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="job_number">Job Number</label>
-                  <input type="text" id="job_number" name="job_number" />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="message">Message *</label>
-                  <textarea
-                    id="message"
-                    name="message"
+                  <label htmlFor="user_email">Email *</label>
+                  <input
+                    type="email"
+                    id="user_email"
+                    name="user_email"
                     required
-                    maxLength="1000"
-                    onChange={handleMessageChange}
-                  ></textarea>
-                  <div className="character-count">
-                    {messageLength}/1000 characters
-                  </div>
+                  />
                 </div>
 
-                {submitStatus.message && (
-                  <div
-                    className={`submit-status ${
-                      submitStatus.isError ? "error" : "success"
-                    }`}
-                  >
-                    {submitStatus.message}
-                  </div>
-                )}
+                <div className="form-group">
+                  <label htmlFor="user_phone">Phone</label>
+                  <input type="tel" id="user_phone" name="user_phone" />
+                </div>
+              </div>
 
-                <button
-                  type="submit"
-                  className="submit-button"
-                  disabled={isSubmitting}
+              <div className="form-group">
+                <label htmlFor="job_number">Job Number *</label>
+                <input type="text" id="job_number" name="job_number" required />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  maxLength="1000"
+                  onChange={handleMessageChange}
+                ></textarea>
+                <div className="character-count">
+                  {messageLength}/1000 characters
+                </div>
+              </div>
+
+              {submitStatus.message && (
+                <div
+                  className={`submit-status ${
+                    submitStatus.isError ? "error" : "success"
+                  }`}
                 >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
-                </button>
-              </form>
-            </div>
+                  {submitStatus.message}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className="submit-button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit Request"}
+              </button>
+            </form>
           </div>
         </div>
       </div>
