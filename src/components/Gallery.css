@@ -13,7 +13,7 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #204ecf;
+  color: #222c44;
 }
 
 .gallery-description {
@@ -97,7 +97,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #204ecf;
+  background: #222c44;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -112,7 +112,7 @@
 }
 
 .gallery-modal-close:hover {
-  background: #163a99;
+  background: #4e5f86;
 }
 
 @media (max-width: 600px) {
