@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
-import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaGoogle } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +21,13 @@ const Header = () => {
   return (
     <header className="header">
       <div className="top-bar">
-        <div className="contact-info-bar">
+        <div className="static-banner-text">
           CONTACT US TODAY! Ed: 615-542-2081 or Allen: 615-542-0208
+        </div>
+        <div className="marquee-container">
+          <span className="marquee-text">
+            CONTACT US TODAY! Ed: 615-542-2081 or Allen: 615-542-0208
+          </span>
         </div>
         <div className="social-links">
           <a
@@ -31,6 +36,13 @@ const Header = () => {
             rel="noopener noreferrer"
           >
             <FaFacebook className="social-icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/steadfastexteriorstn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram className="social-icon instagram-icon" />
           </a>
           <a
             href="https://g.page/steadfastexteriorstn"
