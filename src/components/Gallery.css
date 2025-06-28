@@ -112,7 +112,8 @@
 }
 
 .gallery-modal-close:hover {
-  background: #4e5f86;
+  background: #dedede;
+  color: #000000;
 }
 
 @media (max-width: 600px) {

@@ -219,8 +219,8 @@ body {
 }
 
 .roof-warranty-btn:hover {
-  background: #b31942;
-  color: #fff;
+  background: #dedede;
+  color: #000000;
 }
 
 @media screen and (max-width: 768px) {

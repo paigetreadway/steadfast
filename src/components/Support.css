@@ -40,7 +40,7 @@
 }
 
 .support-info h2 {
-  color: #b31942;
+  color: #2a2d34;
   margin-bottom: 1.5rem;
   font-size: 2rem;
   text-align: left;
@@ -53,7 +53,7 @@
 }
 
 .support-item h3 {
-  color: #b31942;
+  color: #2a2d34;
   margin-bottom: 0.25rem;
   font-size: 1.1rem;
   text-align: left;
@@ -75,8 +75,8 @@
 }
 
 .support-item a:hover {
-  background-color: #ffffff;
-  color: #b31942;
+  background: #dedede;
+  color: #000000;
 }
 
 .support-form {
@@ -142,8 +142,8 @@
 }
 
 .support-submit-button:hover {
-  background-color: #ffffff;
-  color: #b31942;
+  background: #dedede;
+  color: #000000;
 }
 
 .support-submit-status {
