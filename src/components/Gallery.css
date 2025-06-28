@@ -1,0 +1,145 @@
+.gallery-container {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 2rem 1rem;
+  padding-top: 110px;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #204ecf;
+}
+
+.gallery-description {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gallery-image {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.03);
+}
+
+.gallery-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.gallery-modal {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-modal-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+.gallery-modal-image {
+  width: 50%;
+  max-width: none;
+  border-radius: 12px;
+  margin-bottom: 0;
+  object-fit: contain;
+}
+
+.gallery-modal-description {
+  flex: 1;
+  width: 50%;
+  margin-bottom: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #204ecf;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.gallery-modal-close:hover {
+  background: #163a99;
+}
+
+@media (max-width: 600px) {
+  .gallery-container {
+    padding: 1rem 0.25rem;
+  }
+  .gallery-modal {
+    padding: 1rem 0.25rem;
+  }
+  .gallery-image,
+  .gallery-modal-image {
+    max-width: 95vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .gallery-modal-content {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .gallery-modal-image,
+  .gallery-modal-description {
+    width: 100%;
+    max-width: 95vw;
+  }
+  .gallery-modal-description {
+    text-align: left;
+  }
+}

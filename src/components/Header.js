@@ -86,6 +86,14 @@ const Header = () => {
             </li>
             <li>
               <Link
+                to="/gallery"
+                className={location.pathname === "/gallery" ? "active" : ""}
+              >
+                Project Gallery
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/reviews"
                 className={location.pathname === "/reviews" ? "active" : ""}
               >

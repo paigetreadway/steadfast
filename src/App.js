@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Reviews from "./components/Reviews";
 import Warranty from "./components/Warranty";
 import Support from "./components/Support";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/warranty" element={<Warranty />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </div>
     </Router>
