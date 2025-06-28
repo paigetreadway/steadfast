@@ -118,6 +118,7 @@
 @media (max-width: 600px) {
   .gallery-container {
     padding: 1rem 0.25rem;
+    padding-top: 100px;
   }
   .gallery-modal {
     padding: 1rem 0.25rem;

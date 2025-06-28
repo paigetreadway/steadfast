@@ -136,6 +136,13 @@ const Header = () => {
               Support
             </Link>
             <Link
+              to="/gallery"
+              onClick={closeMenu}
+              className={location.pathname === "/gallery" ? "active" : ""}
+            >
+              Project Gallery
+            </Link>
+            <Link
               to="/reviews"
               onClick={closeMenu}
               className={location.pathname === "/reviews" ? "active" : ""}
