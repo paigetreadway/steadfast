@@ -4,15 +4,21 @@ import "./Gallery.css";
 const images = [
   {
     src: process.env.PUBLIC_URL + "/work/VBS-house.jpg",
-    alt: "VBS House",
+    alt: "Custom Cabin Built for Local VBS",
     description:
       "We're proud to support our community! Steadfast Exteriors & General Contracting recently built and donated this custom log cabin-style prop for a local church's Vacation Bible School (VBS) program. It's always a joy to give back and help create fun, engaging spaces where kids can learn, grow, and enjoy the summer. Big thanks to our team for their hard work and heart!",
   },
   {
     src: process.env.PUBLIC_URL + "/work/barn-roof.jpg",
-    alt: "Barn Roof",
+    alt: "New Gutter Installation on Barn",
     description:
       "We recently completed a gutter installation on this barn to help protect the structure from water damage and improve drainage around the foundation. The new system ensures better runoff control and adds a clean, finished look to the exterior.",
+  },
+  {
+    src: process.env.PUBLIC_URL + "/work/door-after.jpg",
+    alt: "Entry Door for Veteran's Home",
+    description:
+      "We had the honor of installing a new entry door for a Veteran's widow, helping improve both security and comfort in her home. It's always a privilege to give back to those who've served — Go Navy!",
   },
 ];
 
@@ -56,7 +62,7 @@ const Gallery = () => {
                 className="gallery-modal-image"
               />
               <div className="gallery-modal-description">
-                <h3>Description</h3>
+                <h3>{images[selectedIndex].alt}</h3>
                 <p>{images[selectedIndex].description}</p>
               </div>
             </div>
